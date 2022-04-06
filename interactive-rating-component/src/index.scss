@@ -1,4 +1,4 @@
-@import "../src/Styles.scss";
+@import "../src/styles/Styles.scss";
 
 body {
   margin: 0;
@@ -8,6 +8,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $VERY_DARK_BLUE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 code {
