@@ -1,5 +1,6 @@
 import "./App.scss";
 import CircleButton from "./components/CircleButton";
+import SubmitButton from "./components/SubmitButton";
 import StarLogo from "./assets/icon-star.svg";
 
 const numbers = [1, 2, 3, 4, 5];
@@ -22,6 +23,8 @@ function App() {
           return <CircleButton category={"number"} number={number} />;
         })}
       </div>
+
+      <SubmitButton />
     </div>
   );
 }
