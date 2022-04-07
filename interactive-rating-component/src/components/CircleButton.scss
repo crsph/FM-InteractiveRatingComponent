@@ -5,4 +5,18 @@
     width: 60px;
     height: 60px;
     border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $MEDIUM_GREY;
+}
+
+.button-container:hover {
+    background-color: $ORANGE;
+    color: $WHITE;
+}
+
+.button-container:active {
+    background-color: $LIGHT_GREY;
+    color: $WHITE;
 }

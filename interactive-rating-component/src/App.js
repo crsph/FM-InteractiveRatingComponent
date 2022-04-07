@@ -1,14 +1,19 @@
 import "./App.scss";
 import CircleButton from "./components/CircleButton";
 
-let numbers = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
 
 function App() {
   return (
     <div class="rating-container">
-      {numbers.map((number) => {
-        <CircleButton number={number} />;
-      })}
+      
+
+      <div class="fluid-button-container">
+        {numbers.map((number) => {
+          console.log(number);
+          return <CircleButton number={number} />;
+        })}
+      </div>
     </div>
   );
 }
