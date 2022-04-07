@@ -1,11 +1,22 @@
 @import "./styles/Styles.scss";
 
 .rating-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: $VERY_DARK_BLUE;
     width: 400px;
     height: 400px;
     border-radius: 30px;
     padding: 40px;
+    
+    &__title {
+        color: $WHITE;
+    }
+
+    &__description {
+        color: $LIGHT_GREY;
+    }
 }
 
 .fluid-button-container {
