@@ -1,8 +1,13 @@
 import "./App.scss";
 import RatingView from "./views/RatingView";
+import { Component } from "react";
 
-function App() {
-  return <RatingView />;
+class App extends Component {
+  render() {
+    return (
+        <RatingView />
+    );
+  }
 }
 
 export default App;

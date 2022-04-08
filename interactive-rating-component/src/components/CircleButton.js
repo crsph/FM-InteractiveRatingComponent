@@ -10,5 +10,9 @@ export default function CircleButton(props) {
     button = <img src={props.src} alt="Star Logo" />;
   }
 
-  return <div class="button-container">{button}</div>;
+  return (
+    <button onClick={props.onClick} className="button-container">
+      {button}
+    </button>
+  );
 }

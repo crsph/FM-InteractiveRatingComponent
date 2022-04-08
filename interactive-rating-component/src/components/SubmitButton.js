@@ -1,6 +1,10 @@
 import React from "react";
 import "./SubmitButton.scss";
 
-export default function SubmitButton() {
-  return <div class="submit-button-container">SUBMIT</div>;
+export default function SubmitButton(props) {
+  return (
+    <div onPress={props.onPress} className="submit-button-container">
+      SUBMIT
+    </div>
+  );
 }

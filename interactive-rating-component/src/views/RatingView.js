@@ -4,6 +4,18 @@ import SubmitButton from "../components/SubmitButton";
 import StarLogo from "../assets/icon-star.svg";
 
 export default class RatingView extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { rateNumber: 0 };
+
+    this.setRateNumber = this.setRateNumber.bind(this);
+  }
+
+  setRateNumber(number) {
+    this.setState({ rateNumber: number });
+  }
+
   render() {
     const numbers = [1, 2, 3, 4, 5];
 
@@ -18,14 +30,22 @@ export default class RatingView extends Component {
           is appreciated to help us improve our offering!
         </div>
 
+        {/* <form> */}
         <div class="fluid-button-container">
-          {numbers.map((number) => {
-            console.log(number);
-            return <CircleButton category={"number"} number={number} />;
+          {numbers.map((number, index) => {
+            return (
+              <CircleButton
+                key={index}
+                category={"number"}
+                number={number}
+                onClick={() => this.setRateNumber(number)}
+              />
+            );
           })}
         </div>
 
         <SubmitButton />
+        {/* </form> */}
       </div>
     );
   }
