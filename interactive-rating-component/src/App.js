@@ -1,13 +1,15 @@
 import "./App.scss";
 import RatingView from "./views/RatingView";
-import { Component } from "react";
+import ThankYouView from "./views/ThankYouView";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-class App extends Component {
-  render() {
-    return (
-        <RatingView />
-    );
-  }
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<RatingView />} />
+        <Route exact path="/thankyou" element={<ThankYouView />} />
+      </Routes>
+    </Router>
+  );
 }
-
-export default App;

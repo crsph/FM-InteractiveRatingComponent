@@ -11,7 +11,11 @@ export default function CircleButton(props) {
   }
 
   return (
-    <button onClick={props.onClick} className="button-container">
+    <button
+      className={"button-container"}
+      name={props.name}
+      onClick={props.onClick}
+    >
       {button}
     </button>
   );
