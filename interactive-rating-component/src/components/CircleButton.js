@@ -6,13 +6,13 @@ export default function CircleButton(props) {
 
   if (props.category === "number") {
     button = <b>{props.number}</b>;
-  } else if (props.category === "image") {
+  } else if (props.category === "logo") {
     button = <img src={props.src} alt="Star Logo" />;
   }
 
   return (
     <button
-      className={"button-container"}
+      className={props.className}
       name={props.name}
       onClick={props.onClick}
     >

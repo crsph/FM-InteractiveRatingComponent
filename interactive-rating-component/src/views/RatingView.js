@@ -9,22 +9,25 @@ export default function RatingView() {
   const navigate = useNavigate();
   const [rateNumber, setRateNumber] = useState(0);
   const [isActive, setActive] = useState("");
-  // const numbers = [
-  //   [1, "one"],
-  //   [2, "two"],
-  //   [3, "three"],
-  //   [4, "four"],
-  //   [5, "five"],
-  // ];
-  const toggleClass = (e) => {
+  const numbers = [
+    { id: 1, name: "one" },
+    { id: 2, name: "two" },
+    { id: 3, name: "three" },
+    { id: 4, name: "four" },
+    { id: 5, name: "five" },
+  ];
+  const toggleButtonColor = (e) => {
     const name = e.currentTarget.name;
     setActive(name);
-    console.log(isActive);
   };
 
   return (
     <div className="rating-container">
-      <CircleButton category={"image"} src={StarLogo} />
+      <CircleButton
+        className="button-container"
+        category={"logo"}
+        src={StarLogo}
+      />
 
       <h1 className="rating-container__title">How did we do?</h1>
 
@@ -34,75 +37,25 @@ export default function RatingView() {
       </div>
 
       <div className="fluid-button-container">
-        <CircleButton
-          className={isActive === "one" ? "button--active" : ""}
-          category="number"
-          number={1}
-          name="one"
-          onClick={(e) => {
-            setRateNumber(1);
-            toggleClass(e);
-          }}
-        />
-        <CircleButton
-          className={isActive === "two" ? "button--active" : ""}
-          category="number"
-          number={2}
-          name="two"
-          onClick={(e) => {
-            setRateNumber(2);
-            toggleClass(e);
-          }}
-        />
-
-        <CircleButton
-          className={isActive === "three" ? "button--active" : ""}
-          category="number"
-          number={3}
-          name="three"
-          onClick={(e) => {
-            setRateNumber(3);
-            toggleClass(e);
-          }}
-        />
-
-        <CircleButton
-          className={isActive === "four" ? "button--active" : ""}
-          category="number"
-          number={4}
-          name="four"
-          onClick={(e) => {
-            setRateNumber(4);
-            toggleClass(e);
-          }}
-        />
-
-        <CircleButton
-          className={isActive === "five" ? "button--active" : ""}
-          category="number"
-          number={5}
-          name="five"
-          onClick={(e) => {
-            setRateNumber(5);
-            toggleClass(e);
-          }}
-        />
-
-        {/* {numbers.map((number, index) => {
+        {numbers.map((number) => {
           return (
             <CircleButton
-              className={isActive === number[1] ? "button--active" : ""}
-              key={index}
+              className={
+                isActive === number.name
+                  ? "button-container--active"
+                  : "button-container"
+              }
+              key={number.id}
               category={"number"}
-              number={number[0]}
-              name={number[1]}
+              number={number.id}
+              name={number.name}
               onClick={(e) => {
-                setRateNumber(number);
-                toggleClass(e);
+                setRateNumber(number.id);
+                toggleButtonColor(e);
               }}
             />
           );
-        })} */}
+        })}
       </div>
 
       <SubmitButton

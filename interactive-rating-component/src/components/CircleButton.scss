@@ -12,6 +12,18 @@
     border: 0;
 }
 
+.button-container--active {
+    background-color: $LIGHT_GREY;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $WHITE;
+    border: 0;
+}
+
 .button-container:hover {
     background-color: $ORANGE;
     color: $WHITE;
