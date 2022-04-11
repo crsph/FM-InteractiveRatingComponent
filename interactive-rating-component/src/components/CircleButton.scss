@@ -34,7 +34,7 @@
     color: $WHITE;
 }
 
-@media screen and (min-width: $MOBILE) {
+@media screen and (max-width: $MOBILE) {
     .button-container {
         width: 45px;
         height: 45px;

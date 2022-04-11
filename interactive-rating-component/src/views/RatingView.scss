@@ -25,7 +25,7 @@
     justify-content: space-between;
 }
 
-@media screen and (min-width: $MOBILE) {
+@media screen and (max-width: $MOBILE) {
     .rating-container {
         width: 290px;
         height: 350px;
