@@ -33,3 +33,15 @@
     background-color: $LIGHT_GREY;
     color: $WHITE;
 }
+
+@media screen and (min-width: $MOBILE) {
+    .button-container {
+        width: 45px;
+        height: 45px;
+    }
+
+    .button-container--active {
+        width: 45px;
+        height: 45px;
+    }
+}

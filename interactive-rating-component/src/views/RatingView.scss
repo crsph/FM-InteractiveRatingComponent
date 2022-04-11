@@ -24,3 +24,12 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media screen and (min-width: $MOBILE) {
+    .rating-container {
+        width: 290px;
+        height: 350px;
+        padding: 30px 20px 30px 20px;
+        border-radius: 20px;
+    }
+}
