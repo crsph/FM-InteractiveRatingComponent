@@ -36,7 +36,7 @@ export default function RatingView() {
         appreciated to help us improve our offering!
       </div>
 
-      <div className="fluid-button-container">
+      <div className="button-row-container">
         {numbers.map((number) => {
           return (
             <CircleButton

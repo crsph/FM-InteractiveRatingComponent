@@ -11,17 +11,17 @@
     height: 350px;
     border-radius: 30px;
     padding: 40px;
-
-    &__selected-rate-number {
-        background-color: $DARK_BLUE;
-        color: $ORANGE;
-        padding: 5px 20px 5px 20px;
-        border-radius: 20px;
-    }
 }
 
 .image-container {
     padding-top: 5px;
+}
+
+.rate-number-container {
+    background-color: $DARK_BLUE;
+    color: $ORANGE;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
 }
 
 .text-container {

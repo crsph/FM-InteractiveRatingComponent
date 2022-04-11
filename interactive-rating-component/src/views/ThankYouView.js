@@ -12,7 +12,7 @@ export default function ThankYouView() {
         <img src={ThankYouIllu} alt="Thank You Illustration" />
       </div>
 
-      <div className="thank-you-container__selected-rate-number">
+      <div className="rate-number-container">
         You selected {location.state} out of 5
       </div>
 
