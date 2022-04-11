@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import StarLogo from "../assets/icon-star.svg";
 import CircleButton from "../components/CircleButton";
 import SubmitButton from "../components/SubmitButton";
-import StarLogo from "../assets/icon-star.svg";
-import { useNavigate } from "react-router-dom";
 import "./RatingView.scss";
 
 export default function RatingView() {

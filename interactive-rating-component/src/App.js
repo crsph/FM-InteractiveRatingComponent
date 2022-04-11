@@ -1,7 +1,7 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import RatingView from "./views/RatingView";
 import ThankYouView from "./views/ThankYouView";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 export default function App() {
   return (

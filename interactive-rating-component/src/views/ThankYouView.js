@@ -1,6 +1,6 @@
 import React from "react";
-import ThankYouIllu from "../assets/illustration-thank-you.svg";
 import { useLocation } from "react-router-dom";
+import ThankYouIllu from "../assets/illustration-thank-you.svg";
 import "./ThankYouView.scss";
 
 export default function ThankYouView() {
