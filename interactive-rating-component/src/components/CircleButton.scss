@@ -12,6 +12,12 @@
     border: 0;
 }
 
+.button-container:hover {
+    background-color: $ORANGE;
+    color: $WHITE;
+}
+
+
 .button-container--active {
     background-color: $LIGHT_GREY;
     width: 50px;
@@ -22,11 +28,6 @@
     align-items: center;
     color: $WHITE;
     border: 0;
-}
-
-.button-container:hover {
-    background-color: $ORANGE;
-    color: $WHITE;
 }
 
 @media screen and (max-width: $MOBILE) {
