@@ -1,41 +1,47 @@
 @import "../styles/Styles.scss";
 
-.button-container {
+.star-button-container {
     background-color: $DARK_BLUE;
+    fill: $MEDIUM_GREY;
     width: 50px;
     height: 50px;
     border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $MEDIUM_GREY;
     border: 0;
 }
 
-.button-container--active {
-    background-color: $LIGHT_GREY;
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $WHITE;
-    border: 0;
-}
-
-.button-container:hover {
+.star-button-container:hover {
     background-color: $ORANGE;
+    fill: $WHITE;
+}
+
+.star-button-container--active {
+    background-color: $DARK_BLUE;
+    fill: $ORANGE;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: $WHITE;
+    border: 0;
+}
+
+.star-button-container--active:hover {
+    background-color: $ORANGE;
+    fill: $WHITE;
 }
 
 @media screen and (max-width: $MOBILE) {
-    .button-container {
+    .star-button-container {
         width: 45px;
         height: 45px;
     }
 
-    .button-container--active {
+    .star-button-container--active {
         width: 45px;
         height: 45px;
     }

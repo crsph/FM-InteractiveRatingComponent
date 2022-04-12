@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import StarLogo from "../assets/icon-star.svg";
 import CircleButton from "../components/CircleButton";
+import StarButtonLogo from "../components/StarLogoButton";
 import SubmitButton from "../components/SubmitButton";
 import "./RatingView.scss";
 
 export default function RatingView() {
   const navigate = useNavigate();
   const [rateNumber, setRateNumber] = useState(0);
-  const [isActive, setActive] = useState("");
+  const [isRateNumberActive, setRateNumberActive] = useState("");
+  const [isStarButtonActive, setStarButtonActive] = useState(false);
   const numbers = [
     { id: 1, name: "one" },
     { id: 2, name: "two" },
@@ -16,17 +17,25 @@ export default function RatingView() {
     { id: 4, name: "four" },
     { id: 5, name: "five" },
   ];
+
+  const toggleStarButtonColor = () => {
+    setStarButtonActive(!isStarButtonActive);
+  };
+
   const toggleButtonColor = (e) => {
     const name = e.currentTarget.name;
-    setActive(name);
+    setRateNumberActive(name);
   };
 
   return (
     <div className="rating-container">
-      <CircleButton
-        className="button-container"
-        category={"logo"}
-        src={StarLogo}
+      <StarButtonLogo
+        className={
+          isStarButtonActive
+            ? "star-button-container--active"
+            : "star-button-container"
+        }
+        onClick={toggleStarButtonColor}
       />
 
       <h1 className="rating-container__title">How did we do?</h1>
@@ -41,12 +50,11 @@ export default function RatingView() {
           return (
             <CircleButton
               className={
-                isActive === number.name
+                isRateNumberActive === number.name
                   ? "button-container--active"
                   : "button-container"
               }
               key={number.id}
-              category={"number"}
               number={number.id}
               name={number.name}
               onClick={(e) => {
