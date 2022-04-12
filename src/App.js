@@ -7,8 +7,8 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/FM-InteractiveRatingComponent" element={<RatingView />} />
-        <Route exact path="/FM-InteractiveRatingComponent/thankyou" element={<ThankYouView />} />
+        <Route exact path="/" element={<RatingView />} />
+        <Route exact path="/thankyou" element={<ThankYouView />} />
       </Routes>
     </Router>
   );
