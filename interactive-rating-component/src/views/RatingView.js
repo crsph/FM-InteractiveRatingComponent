@@ -22,7 +22,7 @@ export default function RatingView() {
     setStarButtonActive(!isStarButtonActive);
   };
 
-  const toggleButtonColor = (e) => {
+  const toggleRateButtonColor = (e) => {
     const name = e.currentTarget.name;
     setRateNumberActive(name);
   };
@@ -59,7 +59,7 @@ export default function RatingView() {
               name={number.name}
               onClick={(e) => {
                 setRateNumber(number.id);
-                toggleButtonColor(e);
+                toggleRateButtonColor(e);
               }}
             />
           );
