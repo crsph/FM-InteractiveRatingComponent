@@ -67,7 +67,12 @@ export default function RatingView() {
       </div>
 
       <SubmitButton
-        onClick={() => navigate("/FM-InteractiveRatingComponent/thankyou", { state: rateNumber })}
+        disabled={rateNumber === 0 ? true : false}
+        onClick={() =>
+          navigate("/FM-InteractiveRatingComponent/thankyou", {
+            state: rateNumber,
+          })
+        }
       />
     </div>
   );
