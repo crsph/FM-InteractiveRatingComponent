@@ -17,3 +17,8 @@
     background-color: $WHITE;
     color: $ORANGE;
 }
+
+.submit-button-container:disabled {
+    background-color: $DARK_BLUE;
+    color: $MEDIUM_GREY;
+}
