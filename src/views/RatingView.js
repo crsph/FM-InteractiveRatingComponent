@@ -28,52 +28,54 @@ export default function RatingView() {
   };
 
   return (
-    <div className="rating-container">
-      <StarButtonLogo
-        className={
-          isStarButtonActive
-            ? "star-button-container--active"
-            : "star-button-container"
-        }
-        onClick={toggleStarButtonColor}
-      />
+    <main>
+      <div className="rating-container">
+        <StarButtonLogo
+          className={
+            isStarButtonActive
+              ? "star-button-container--active"
+              : "star-button-container"
+          }
+          onClick={toggleStarButtonColor}
+        />
 
-      <h1 className="rating-container__title">How did we do?</h1>
+        <h1 className="rating-container__title">How did we do?</h1>
 
-      <div className="rating-container__description">
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
+        <div className="rating-container__description">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </div>
+
+        <div className="button-row-container">
+          {numbers.map((number) => {
+            return (
+              <CircleButton
+                className={
+                  isRateNumberActive === number.name
+                    ? "button-container--active"
+                    : "button-container"
+                }
+                key={number.id}
+                number={number.id}
+                name={number.name}
+                onClick={(e) => {
+                  setRateNumber(number.id);
+                  toggleRateButtonColor(e);
+                }}
+              />
+            );
+          })}
+        </div>
+
+        <SubmitButton
+          disabled={rateNumber === 0 ? true : false}
+          onClick={() =>
+            navigate("/FM-InteractiveRatingComponent/thankyou", {
+              state: rateNumber,
+            })
+          }
+        />
       </div>
-
-      <div className="button-row-container">
-        {numbers.map((number) => {
-          return (
-            <CircleButton
-              className={
-                isRateNumberActive === number.name
-                  ? "button-container--active"
-                  : "button-container"
-              }
-              key={number.id}
-              number={number.id}
-              name={number.name}
-              onClick={(e) => {
-                setRateNumber(number.id);
-                toggleRateButtonColor(e);
-              }}
-            />
-          );
-        })}
-      </div>
-
-      <SubmitButton
-        disabled={rateNumber === 0 ? true : false}
-        onClick={() =>
-          navigate("/FM-InteractiveRatingComponent/thankyou", {
-            state: rateNumber,
-          })
-        }
-      />
-    </div>
+    </main>
   );
 }

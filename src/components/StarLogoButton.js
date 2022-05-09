@@ -4,7 +4,7 @@ import "./StarLogoButton.scss";
 
 export default function StarLogoButton(props) {
   return (
-    <button className={props.className} onClick={props.onClick}>
+    <button id="al" aria-label="Star Logo" className={props.className} onClick={props.onClick}>
       <StarLogo />
     </button>
   );
