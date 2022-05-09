@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/FM-InteractiveRatingComponent/static/css/main.6a0daeb7.css",
-    "main.js": "/FM-InteractiveRatingComponent/static/js/main.83ffb7bc.js",
+    "main.js": "/FM-InteractiveRatingComponent/static/js/main.dbce6d9b.js",
     "static/js/787.652de61e.chunk.js": "/FM-InteractiveRatingComponent/static/js/787.652de61e.chunk.js",
     "static/media/Overpass-Regular.ttf": "/FM-InteractiveRatingComponent/static/media/Overpass-Regular.e29f32344fe15848e8d6.ttf",
     "static/media/illustration-thank-you.svg": "/FM-InteractiveRatingComponent/static/media/illustration-thank-you.d74a66b551b99ae110b5362ed63106bf.svg",
     "index.html": "/FM-InteractiveRatingComponent/index.html",
     "static/media/icon-star.svg": "/FM-InteractiveRatingComponent/static/media/icon-star.e37c162dc99e92863bdeaf8853f23d8f.svg",
     "main.6a0daeb7.css.map": "/FM-InteractiveRatingComponent/static/css/main.6a0daeb7.css.map",
-    "main.83ffb7bc.js.map": "/FM-InteractiveRatingComponent/static/js/main.83ffb7bc.js.map",
+    "main.dbce6d9b.js.map": "/FM-InteractiveRatingComponent/static/js/main.dbce6d9b.js.map",
     "787.652de61e.chunk.js.map": "/FM-InteractiveRatingComponent/static/js/787.652de61e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6a0daeb7.css",
-    "static/js/main.83ffb7bc.js"
+    "static/js/main.dbce6d9b.js"
   ]
 }
